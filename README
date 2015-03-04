@@ -3,3 +3,7 @@
 - Install SourceTree from http://www.sourcetreeapp.com/
 - Install SequelPro from http://www.sequelpro.com/
 - Install MySql from brew install mysql
+
+
+If having problems with rmagick:
+- brew uninstall pkgconfig imagemagick, brew install imagemagick pkgconfig, bundle
