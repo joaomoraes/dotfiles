@@ -2,7 +2,7 @@
 
 #edit_my_bash
 function edit_my_bash(){
-  subl -n ~/BashLib;
+  subl $DOTFILE_RELATIVE_PATH;
   subl ~/.bash_profile;
 }
 

@@ -3,6 +3,9 @@ export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
+# Put relative path to dotfiles path
+export DOTFILE_RELATIVE_PATH="~/Joao/Pessoal/dotfiles"
+
 # If running interactively, then:
 if [ "$PS1" ]; then
 	#Cores
@@ -39,10 +42,19 @@ if [ "$PS1" ]; then
 fi
 
 # Export variables
-export EDITOR="sublime.sh"
+export EDITOR="subl"
+
+function safe_source() { echo eval " \
+  if [ -r $1 ] ; then \
+    source $1 ; \
+  else \
+    logger -t $0 -p crit \"unable to source $1\" ; \
+    exit 1 ; \
+  fi \
+"; }
 
 # -----  Setting Files  -----
-source /.BashLib/.config
+`safe_source ${DOTFILE_RELATIVE_PATH}/.BashLib/.config`
 
 # Note: ~/.ssh/environment should not be used, as it
 #       already has a different purpose in SSH.
