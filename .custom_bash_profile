@@ -1,10 +1,9 @@
+# Check if DOTFILE_RELATIVE_PATH environment variable is set
+: ${DOTFILE_RELATIVE_PATH:?"Need to set DOTFILE_RELATIVE_PATH non-empty on bash_profile"}
 
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-
-# Put relative path to dotfiles path
-export DOTFILE_RELATIVE_PATH="~/Joao/Pessoal/dotfiles"
 
 # If running interactively, then:
 if [ "$PS1" ]; then

@@ -7,3 +7,9 @@
 
 If having problems with rmagick:
 - brew uninstall pkgconfig imagemagick, brew install imagemagick pkgconfig, bundle
+
+
+Edit machine's .bash_profile, adding:
+
+- export DOTFILE_RELATIVE_PATH="path_to_dotfile_folder"
+- eval "source ${DOTFILE_RELATIVE_PATH}/.custom_bash_profile"
