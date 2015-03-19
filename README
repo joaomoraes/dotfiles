@@ -14,5 +14,5 @@ Edit machine's .bash_profile, adding:
 - export DOTFILE_RELATIVE_PATH="path_to_dotfile_folder"
 - eval "source ${DOTFILE_RELATIVE_PATH}/.custom_bash_profile"
 
-If having problems with files having non-English characters:
+If having versioning problems with files having non-English characters:
 - git config core.precomposeunicode false
