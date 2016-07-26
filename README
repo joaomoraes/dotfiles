@@ -15,4 +15,7 @@ Edit machine's .bash_profile, adding:
 - eval "source ${DOTFILE_RELATIVE_PATH}/.custom_bash_profile"
 
 If having versioning problems with files having non-English characters:
-- git config core.precomposeunicode false
+- git config --global core.precomposeunicode false
+
+If having problems with end of line characters
+- git config --global core.autocrlf true
