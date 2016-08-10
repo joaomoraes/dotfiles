@@ -19,3 +19,6 @@ If having versioning problems with files having non-English characters:
 
 If having problems with end of line characters
 - git config --global core.autocrlf true
+
+If needing to mount windows shared folder (for vm)
+https://wiki.ubuntu.com/MountWindowsSharesPermanently
